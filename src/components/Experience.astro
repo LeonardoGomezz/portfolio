@@ -1,26 +1,15 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import ExperienceItem from "./ExperienceItem.astro"
-const EXPERIENCE = [
-  {
-    date: "Julio 2023 - Novienmbre 2024",
-    title: "Dedarrollador web",
-    company: "Kru360",
-    description:
-      "Desarrollar sitios web, Ecomerce y Landing pages utilizando Nextjs, Integrar y consumir APIs y micro servicios para mejorar la funcionalidad y el rendimiento de los sitios web. Mantenimiento y optimización de sitios web e interfaces en el frontend",
-  },
-  {
-    date: "Enero 2020 - Mayo 2021",
-    title: "Desarrollador Web Freelance",
-    company: "",
-    description:
-      "Como desarrollador web freelance, implementé sitios y aplicaciones web utilizando WordPress, React, Next.js y Astro, adaptándolos a las necesidades de los clientes. Me enfoqué en la creación de funcionalidades personalizadas, integración de herramientas externas y mantenimiento técnico, asegurando soluciones optimizadas y de alta calidad.",
-  },
-]
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const workExperience = t('experience')
 ---
 
 <ol class="relative mt-16">
   {
-    EXPERIENCE.map((experience) => (
+    Array.isArray(workExperience) && workExperience.map((experience) => (
       <li class="">
         <ExperienceItem {...experience} />
       </li>

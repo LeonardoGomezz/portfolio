@@ -1,29 +1,11 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro"
 import SelectLanguage from '../components/SelectLanguage.astro'
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
 
-const navItems = [
-  {
-    title: "Experiencia",
-    label: "experiencia",
-    url: "/#experiencia",
-  },
-  {
-    title: "Proyectos",
-    label: "proyectos",
-    url: "/#proyectos",
-  },
-  {
-    title: "Sobre mí",
-    label: "sobre-mi",
-    url: "/#sobre-mi",
-  },
-  {
-    title: "Contacto",
-    label: "contacto",
-    url: "mailto:leonardogomez306@gmail.com",
-  },
-]
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const navList = t('navItems')
 ---
 
 <header
@@ -32,20 +14,19 @@ const navItems = [
   <nav
     class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
   >
-    {
-      navItems.map((link) => (
-        <a
-          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
-          aria-label={link.label}
-          href={link.url}
-        >
-          {link.title}
-        </a>
-      ))
-    }
+    {Array.isArray(navList) && navList.map((item) =>(
+      <a
+        class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+        aria-label={item.label}
+        href={item.url.startsWith('mailto:') ? item.url : `/${lang}${item.url}`} 
+      >
+        {item.title}
+      </a>
+    ))}
+    
     <div class="flex gap-2 items-center">
       <ThemeToggle />
-      <SelectLanguage/>
+      <SelectLanguage/>  <!-- Asegurarse de que SelectLanguage siga funcionando después de la actualización del idioma -->
     </div>
   </nav>
 </header>

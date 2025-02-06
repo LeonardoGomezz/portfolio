@@ -1,70 +1,17 @@
 ---
 import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
 
-const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
-  },
-  TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
-  },
-}
-const PROJECTS = [
-  {
-    title: "Multifiltors",
-    description:
-      "E-commerce especializado en filtros para autos, baterías, aceites y otros productos automotrices. Además, ofrecemos servicios profesionales para el cuidado y mantenimiento de tu vehículo, con la calidad y confianza que necesitas. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://multifiltrosctg.com/",
-    github: "",
-    image: "/images/multifiltros.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "Versus",
-    description:
-      "E-commerce de ropa para dama. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://www.versusbyvalen.com/",
-    image: "/images/versus.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "Viviana Rodriguez - Wedding planner",
-    description:
-      "Sitio web. Expertos en diseño y ejecución de bodas completamente personalizadas en Cartagena. ",
-    link: "https://vivianarodriguez.co/",
-    image: "/images/vivianaRodriguez.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "C-Marketing",
-    description:
-      "Sitio web agencia de marketing digital. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://somoscmarketing.com/",
-    image: "/images/c-marketing.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "Creando tu hoja de vida",
-    description:
-      "Sitio web agencia de consultoría y orientación laboral. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://creandotuhojadevida.com/",
-    image: "/images/creando-tu-hoja-de-vida.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  }
-]
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const workProjects = t('proyects')
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    Array.isArray(workProjects) && workProjects.map(({ image, title, description, tags, link, github }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -78,7 +25,7 @@ const PROJECTS = [
     </h3>
     <div class="flex flex-wrap mt-2">
       <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
+          {tags.map((tag : any) => (
             <li>
               <span
                 class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
