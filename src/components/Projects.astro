@@ -4,6 +4,10 @@ import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const TAGS = {
   NEXT: {
@@ -19,9 +23,8 @@ const TAGS = {
 }
 const PROJECTS = [
   {
-    title: "Multifiltors",
-    description:
-      "E-commerce especializado en filtros para autos, baterías, aceites y otros productos automotrices. Además, ofrecemos servicios profesionales para el cuidado y mantenimiento de tu vehículo, con la calidad y confianza que necesitas. Creado desde cero con Next.js, React y Tailwind CSS.",
+    title: "Multifiltros",
+    description: t("projects.1.description"),
     link: "https://multifiltrosctg.com/",
     github: "",
     image: "/images/multifiltros.png",
@@ -29,32 +32,28 @@ const PROJECTS = [
   },
   {
     title: "Versus",
-    description:
-      "E-commerce de ropa para dama. Creado desde cero con Next.js, React y Tailwind CSS.",
+    description: t("projects.2.description"),
     link: "https://www.versusbyvalen.com/",
     image: "/images/versus.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
   {
     title: "Viviana Rodriguez - Wedding planner",
-    description:
-      "Sitio web. Expertos en diseño y ejecución de bodas completamente personalizadas en Cartagena. ",
+    description: t("projects.3.description"),
     link: "https://vivianarodriguez.co/",
     image: "/images/vivianaRodriguez.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
   {
     title: "C-Marketing",
-    description:
-      "Sitio web agencia de marketing digital. Creado desde cero con Next.js, React y Tailwind CSS.",
+    description: t("projects.4.description"),
     link: "https://somoscmarketing.com/",
     image: "/images/c-marketing.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
   {
     title: "Creando tu hoja de vida",
-    description:
-      "Sitio web agencia de consultoría y orientación laboral. Creado desde cero con Next.js, React y Tailwind CSS.",
+    description: t("projects.5.description"),
     link: "https://creandotuhojadevida.com/",
     image: "/images/creando-tu-hoja-de-vida.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
@@ -95,14 +94,14 @@ const PROJECTS = [
           {github && (
             <LinkButton href={github}>
               <GitHub class="size-6" />
-              Code
+              {t('projects.tag1')}
               
             </LinkButton>
           )}
           {link && (
             <LinkButton href={link}>
               <Link class="size-4" />
-              Preview
+              {t('projects.tag2')}
             </LinkButton>
           )}
         </footer>

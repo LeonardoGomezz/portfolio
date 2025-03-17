@@ -1,29 +1,21 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
  const personalImageAlt = "Leonardo Gomez"
+
+ const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
   <div
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
   >
-    <p>
-      ¡Hola! Soy Leonardo José Gómez, desarrollador web freelance con experiencia desde 2020. 
-      Mi enfoque está en <strong>crear soluciones digitales</strong> funcionales y atractivas, combinando diseño y 
-      rendimiento para ofrecer la mejor experiencia a los usuarios.
-    </p>
+    <p set:html={t('aboutMe.intro')}></p>
 
-    <p>
-      He trabajado con tecnologías como WordPress, React, Next.js y Astro, <strong>desarrollando sitios y 
-      aplicaciones adaptadas a las necesidades de cada cliente.</strong> Durante mi carrera, he tenido la 
-      oportunidad de optimizar proyectos para mejorar su rendimiento y posicionamiento, siempre 
-      priorizando la calidad y los detalles que marcan la diferencia.
-    </p>
+    <p set:html={t('aboutMe.experience')}></p>
 
-    <p>
-      Además de mi experiencia técnica, me mantengo en constante aprendizaje para incorporar las últimas 
-      tendencias y herramientas en mis proyectos. Creo firmemente en el valor de la innovación y el crecimiento 
-      continuo, lo que me motiva a superar expectativas y aportar soluciones que realmente destaquen.
-    </p>
+    <p>{t('aboutMe.learning')}</p>
   </div>
 
   <img width="200" height="200" src="/images/fotoLeo.jpg" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 " style="object-position: 50% 50%">

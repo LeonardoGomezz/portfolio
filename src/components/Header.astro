@@ -1,25 +1,30 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import LanguagePicker from "./LanguagePicker.astro";
 import ThemeToggle from "./ThemeToggle.astro"
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const navItems = [
   {
-    title: "Experiencia",
-    label: "experiencia",
-    url: "/#experiencia",
+    title: t("nav.1.title"),
+    label: t("nav.1.title"),
+    url:`/${lang}/#experiencia`,
   },
   {
-    title: "Proyectos",
-    label: "proyectos",
-    url: "/#proyectos",
+    title: t("nav.2.title"),
+    label: t("nav.2.title"),
+    url: `/${lang}/#proyectos`,
   },
   {
-    title: "Sobre mí",
-    label: "sobre-mi",
-    url: "/#sobre-mi",
+    title: t("nav.3.title"),
+    label: t("nav.3.title"),
+    url: `/${lang}/#sobre-mi`,
   },
   {
-    title: "Contacto",
-    label: "contacto",
+    title: t("nav.4.title"),
+    label: t("nav.4.title"),
     url: "mailto:leonardogomez306@gmail.com",
   },
 ]
@@ -29,12 +34,12 @@ const navItems = [
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
-    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center whitespace-nowrap"
   >
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500 whitespace-nowrap"
           aria-label={link.label}
           href={link.url}
         >
@@ -42,7 +47,9 @@ const navItems = [
         </a>
       ))
     }
-    <ThemeToggle />
+      <ThemeToggle />
+      <!-- <LanguagePicker/> -->
+    </div>
   </nav>
 </header>
 
