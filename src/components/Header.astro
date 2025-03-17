@@ -1,5 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import LanguagePicker from "./LanguagePicker.astro";
 import ThemeToggle from "./ThemeToggle.astro"
 
 const lang = getLangFromUrl(Astro.url);
@@ -47,6 +48,7 @@ const navItems = [
       ))
     }
       <ThemeToggle />
+      <!-- <LanguagePicker/> -->
     </div>
   </nav>
 </header>

@@ -1,10 +1,72 @@
 ---
 import { languages } from '../i18n/ui';
+import Language from './icons/Language.astro';
 ---
-<ul>
-  {Object.entries(languages).map(([lang, label]) => (
-    <li>
-      <a href={`/${lang}/`}>{label}</a>
-    </li>
-  ))}
-</ul>
+
+<div class="relative z-50 inline-block">
+  <button
+    id="language-toggle-btn"
+   class="flex items-center gap-2 p-2 text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg shadow-md transition hover:bg-gray-100 dark:hover:bg-gray-700"
+  >
+    <Language />
+  </button>
+
+  <div
+    id="languages-menu"
+    class="absolute z-50 hidden scale-80 top-12 min-w-[8rem] p-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg transition-all right-0"
+  >
+    <ul>
+      {Object.entries(languages).map(([code, label]) => (
+        <li
+          class="language-option px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 rounded-sm"
+          data-lang={code}
+        >
+          {label}
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+<style>
+  #languages-menu.open {
+    display: block;
+    animation: scale-up-center 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  @keyframes scale-up-center {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+</style>
+
+<script is:inline>
+  const languagesMenu = document.getElementById("languages-menu");
+  const toggleBtn = document.getElementById("language-toggle-btn");
+
+  document.addEventListener("click", (event) => {
+    if (!toggleBtn.contains(event.target)) {
+      languagesMenu.classList.remove("open");
+    }
+  });
+
+  toggleBtn.addEventListener("click", (event) => {
+    event.stopPropagation();
+    languagesMenu.classList.toggle("open");
+  });
+
+  document.querySelectorAll(".language-option").forEach((element) => {
+    element.addEventListener("click", (event) => {
+      const langCode = event.target.getAttribute("data-lang");
+      window.location.href = `/${langCode}`;
+      languagesMenu.classList.remove("open");
+    });
+  });
+</script>

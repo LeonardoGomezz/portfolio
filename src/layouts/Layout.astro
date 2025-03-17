@@ -14,6 +14,7 @@ const { description, title } = Astro.props
 
 import { getLangFromUrl } from '../i18n/utils';
 import { LanguageSelect } from "../components/reactComponents/LanguageSelect"
+import LanguagePicker from "../components/LanguagePicker.astro"
 
 const lang = getLangFromUrl(Astro.url);
 ---
@@ -38,7 +39,9 @@ const lang = getLangFromUrl(Astro.url);
     >
     </div>
     <Header />
-    <LanguageSelect client:only="React"/>
+    <div class="fixed right-2 bottom-32 z-50">
+      <LanguagePicker/>
+    </div>
     <slot />
     <Footer />
     <style is:global>
