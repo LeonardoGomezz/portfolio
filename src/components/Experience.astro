@@ -1,28 +1,29 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import ExperienceItem from "./ExperienceItem.astro"
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const EXPERIENCE = [
   {
-    date: "Enero 2020 - Mayo 2021",
-    title: "Desarrollador Web",
+    date: t("experience.1.date"),
+    title: t("experience.1.title"),
     company: "Freelance",
-    description:
-      "Como desarrollador web freelance, implementé sitios y aplicaciones web utilizando WordPress, React, Next.js y Astro, adaptándolos a las necesidades de los clientes. Me enfoqué en la creación de funcionalidades personalizadas, integración de herramientas externas y mantenimiento técnico, asegurando soluciones optimizadas y de alta calidad.",
+    description: t("experience.1.description"),
   },
   {
-    date: "Julio 2023 - Novienmbre 2024",
-    title: "Desarrollador web",
+    date: t("experience.2.date"),
+    title: t("experience.2.title"),
     company: "Kru360",
-    description:
-      "Desarrollar sitios web, Ecomerce y Landing pages utilizando Nextjs, Integrar y consumir APIs y micro servicios para mejorar la funcionalidad y el rendimiento de los sitios web. Mantenimiento y optimización de sitios web e interfaces en el frontend",
+    description: t("experience.2.description"),
   },
   {
-    date: "Enero 2020 - Actualidad",
-    title: "Desarrollador Frontend",
-    company: "IncubApp Venture Capita",
-    description:
-      "Responsable del desarrollo del frontend de la plataforma web de Concert Plaza con Next.js y TypeScript, asegurando una interfaz atractiva y funcional. Implementé componentes interactivos y funcionalidades dinámicas para mejorar la experiencia de usuario, además de integrar y consumir APIs y microservicios para optimizar el rendimiento y la conectividad. El proyecto se gestionó bajo la metodología Scrum.",
+    date: t("experience.3.date"),
+    title: t("experience.3.title"),
+    company: "IncubApp Venture Capital",
+    description: t("experience.3.description"),
   },
-]
+];
 ---
 
 <ol class="relative mt-16">

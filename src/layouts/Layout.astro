@@ -11,10 +11,15 @@ interface Props {
 }
 
 const { description, title } = Astro.props
+
+import { getLangFromUrl } from '../i18n/utils';
+import { LanguageSelect } from "../components/reactComponents/LanguageSelect"
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -33,6 +38,7 @@ const { description, title } = Astro.props
     >
     </div>
     <Header />
+    <LanguageSelect client:only="React"/>
     <slot />
     <Footer />
     <style is:global>

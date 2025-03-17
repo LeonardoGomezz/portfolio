@@ -1,25 +1,29 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import ThemeToggle from "./ThemeToggle.astro"
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const navItems = [
   {
-    title: "Experiencia",
-    label: "experiencia",
-    url: "/#experiencia",
+    title: t("nav.1.title"),
+    label: t("nav.1.title"),
+    url:`/${lang}/#experiencia`,
   },
   {
-    title: "Proyectos",
-    label: "proyectos",
-    url: "/#proyectos",
+    title: t("nav.2.title"),
+    label: t("nav.2.title"),
+    url: `/${lang}/#proyectos`,
   },
   {
-    title: "Sobre mí",
-    label: "sobre-mi",
-    url: "/#sobre-mi",
+    title: t("nav.3.title"),
+    label: t("nav.3.title"),
+    url: `/${lang}/#sobre-mi`,
   },
   {
-    title: "Contacto",
-    label: "contacto",
+    title: t("nav.4.title"),
+    label: t("nav.4.title"),
     url: "mailto:leonardogomez306@gmail.com",
   },
 ]

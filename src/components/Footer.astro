@@ -1,5 +1,10 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
 // const currentYear = new Date().getFullYear()
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer
@@ -17,11 +22,11 @@
       class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
     >
       <li>
-        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+        <a href={`/${lang}/#sobre-mi`} class="hover:underline me-4 md:me-6">{t('footer.link1')}</a>
       </li>
       <li>
         <a id="contacto" href="mailto:leonardogomez306@gmail.com" class="hover:underline"
-          >Contacto</a
+          >{t('footer.link2')}</a
         >
       </li>
     </ul>
