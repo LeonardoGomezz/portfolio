@@ -13,7 +13,6 @@ interface Props {
 const { description, title } = Astro.props
 
 import { getLangFromUrl } from '../i18n/utils';
-import { LanguageSelect } from "../components/reactComponents/LanguageSelect"
 import LanguagePicker from "../components/LanguagePicker.astro"
 
 const lang = getLangFromUrl(Astro.url);
