@@ -27,5 +27,5 @@ Puedes ver cada uno de mis proyectos accediendo a sus respectivos enlaces de Git
 Si deseas ponerte en contacto conmigo para proyectos freelance, colaboración o cualquier consulta, puedes hacerlo a través de los siguientes medios:
 
 - **Email**: leonardogomez306@gmail.com
-- **LinkedIn**: [Tu perfil en LinkedIn](https://www.linkedin.com/in/leonardo-gomez-gomez-62b21023b/)
+- **LinkedIn**: [Tu perfil en LinkedIn](https://www.linkedin.com/in/leonardogomezgomez/)
 - **GitHub**: [Mi perfil en GitHub](https://github.com/LeonardoGomezz)
