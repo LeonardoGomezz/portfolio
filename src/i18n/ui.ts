@@ -13,7 +13,7 @@ export const ui = {
       "Contrata a Leonardo Gomez para crear tu aplicación web o móvil. Desarrollador Web. Especializado en crear aplicaciones únicas.",
     "hero.title": "Hey, soy Leonardo Gomez",
     "hero.description":
-      "+3 años de experiencia. <strong>Ingeniero de sistemas, Desarrollador web</strong> de Colombia, Cartagena de Indias. Especializado en el desarrollo de aplicaciones web únicas.",
+      "+4 años de experiencia. <strong>Ingeniero de sistemas, Desarrollador web</strong> de Colombia, Cartagena de Indias. Especializado en el desarrollo de aplicaciones web únicas.",
     "hero.tag1": "Contáctame",
     "hero.badge": "Disponible para trabajar",
     "section.experience": "Experiencia laboral",
@@ -69,7 +69,7 @@ export const ui = {
       "Hire Leonardo Gomez to create your web or mobile application. Web Developer. Specialized in creating unique applications.",
     "hero.title": "Hey, i'm Leonardo Gomez",
     "hero.description":
-      "+3 years of experience. <strong>Bachelor of Systems Engineering, Web Developer</strong> from Colombia, Cartagena de Indias. Specialized in creating unique web applications.",
+      "+4 years of experience. <strong>Bachelor of Systems Engineering, Web Developer</strong> from Colombia, Cartagena de Indias. Specialized in creating unique web applications.",
     "hero.tag1": "Contact me at",
     "hero.badge": "Available for work",
     "section.experience": "Work experience",
