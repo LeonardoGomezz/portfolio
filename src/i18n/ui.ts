@@ -30,9 +30,13 @@ export const ui = {
     "experience.2.description":
       "Desarrollé sitios web, E-commerce y Landing Pages utilizando Next.js. Integré y consumí APIs y microservicios para mejorar la funcionalidad y el rendimiento de los sitios web. También realicé mantenimiento y optimización de interfaces en el frontend.",
 
-    "experience.3.date": "Enero 2020 - Actualidad",
+    "experience.3.date": "Enero 2022 - Diciembre 2024",
     "experience.3.title": "Desarrollador Frontend",
     "experience.3.description":
+      "Participé activamente en el desarrollo y mantenimiento de una plataforma web en producción utilizando Next.js y TypeScript, asegurando una arquitectura robusta y un código altamente tipado. Durante este proceso, contribuí a la creación de una librería de componentes de interfaz reutilizables que mejoró la consistencia visual y la eficiencia en el flujo de trabajo. Asimismo, ejecuté la integración de APIs REST y microservicios para optimizar el manejo dinámico de datos y el rendimiento de la plataforma. Todo el ciclo de desarrollo se llevó a cabo en un entorno Agile/Scrum, colaborando estrechamente con los equipos de backend y producto para garantizar la entrega de funcionalidades alineadas con los objetivos del negocio.",
+    "experience.4.date": "Enero 2025 - Diciembre 2025",
+    "experience.4.title": "Desarrollador Frontend",
+    "experience.4.description":
       "Responsable del desarrollo del frontend de la plataforma web de Concert Plaza con Next.js y TypeScript, asegurando una interfaz atractiva y funcional. Implementé componentes interactivos y funcionalidades dinámicas para mejorar la experiencia de usuario, además de integrar y consumir APIs y microservicios para optimizar el rendimiento y la conectividad. El proyecto se gestionó bajo la metodología Scrum.",
 
     "projects.1.description":
@@ -88,9 +92,13 @@ export const ui = {
     "experience.2.description":
       "Developed websites, E-commerce platforms, and Landing Pages using Next.js. Integrated and consumed APIs and microservices to enhance website functionality and performance. Also performed maintenance and optimization of frontend interfaces.",
 
-    "experience.3.date": "January 2020 - Present",
+    "experience.3.date": "January 2022 - December 2024",
     "experience.3.title": "Frontend Developer",
     "experience.3.description":
+      "I actively participated in the development and maintenance of a web platform in production using Next.js and TypeScript, ensuring a robust architecture and highly typed code. During this process, I contributed to the creation of a library of reusable interface components that improved visual consistency and workflow efficiency. I also executed the integration of REST APIs and microservices to optimize dynamic data handling and platform performance. The entire development cycle was carried out in an Agile/Scrum environment, collaborating closely with the backend and product teams to ensure the delivery of features aligned with business objectives.",
+    "experience.4.date": "January 2025 - December 2025",
+    "experience.4.title": "Frontend Developer",
+    "experience.4.description":
       "Responsible for developing the frontend of the Concert Plaza web platform using Next.js and TypeScript, ensuring an attractive and functional interface. Implemented interactive components and dynamic features to enhance the user experience, while also integrating and consuming APIs and microservices for performance optimization and connectivity. The project was managed using the Scrum methodology.",
     "projects.1.description":
       "E-commerce specializing in filters for cars, batteries, oils, and other automotive products. We also offer professional services for the care and maintenance of your vehicle, with the quality and trust you need. Built from scratch with Next.js, React, and Tailwind CSS.",
