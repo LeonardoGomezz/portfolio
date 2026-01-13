@@ -47,6 +47,8 @@ export const ui = {
       "Sitio web agencia de consultoría y orientación laboral. Creado desde cero con Next.js, React y Tailwind CSS.",
     "projects.6.description":
       "Una aplicación móvil desarrollada en React Native CLI que permite ver, buscar y explorar detalles de peliculas, asi como ver el trailer, elenco, generos y presupuesto utilizando la API de the movieDb.",
+    "projects.7.description":
+      "Kiva es una tienda en linea de ropa masculina, donde encontraras prendas de alta calidad y estilo unico. Construido desde cero con Next.js, Tailwind CSS, shadcn y tanstack query.",
 
     "aboutMe.intro":
       " ¡Hola! Soy Leonardo José Gómez, desarrollador web freelance con experiencia desde 2020. Mi enfoque está en <strong>crear soluciones digitales</strong> funcionales y atractivas, combinando diseño y rendimiento para ofrecer la mejor experiencia a los usuarios.",
@@ -103,6 +105,8 @@ export const ui = {
       "Website for a consulting and career guidance agency. Built from scratch with Next.js, React, and Tailwind CSS.",
     "projects.6.description":
       "A mobile app developed in React Native CLI that allows you to view, search and browse movie details, as well as view the trailer, cast, genres and budget using the movieDb API.",
+    "projects.7.description":
+      "Kiva is an online men's clothing store where you will find high-quality garments with unique styles. Built from scratch with Next.js, Tailwind CSS, shadcn, and tanstack query.",
 
     "aboutMe.intro":
       "Hi! I'm Leonardo José Gómez, a freelance web developer with experience since 2020. My focus is on <strong>creating digital solutions</strong> that are functional and visually appealing, combining design and performance to deliver the best user experience.",
