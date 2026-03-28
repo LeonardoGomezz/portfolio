@@ -31,7 +31,7 @@ export const ui = {
       "Desarrollé sitios web, E-commerce y Landing Pages utilizando Next.js. Integré y consumí APIs y microservicios para mejorar la funcionalidad y el rendimiento de los sitios web. También realicé mantenimiento y optimización de interfaces en el frontend.",
 
     "experience.3.date": "Enero 2022 - Diciembre 2024",
-    "experience.3.title": "Desarrollador Frontend",
+    "experience.3.title": "Desarrollador Full Stack",
     "experience.3.description":
       "Participé activamente en el desarrollo y mantenimiento de una plataforma web en producción utilizando Next.js y TypeScript, asegurando una arquitectura robusta y un código altamente tipado. Durante este proceso, contribuí a la creación de una librería de componentes de interfaz reutilizables que mejoró la consistencia visual y la eficiencia en el flujo de trabajo. Asimismo, ejecuté la integración de APIs REST y microservicios para optimizar el manejo dinámico de datos y el rendimiento de la plataforma. Todo el ciclo de desarrollo se llevó a cabo en un entorno Agile/Scrum, colaborando estrechamente con los equipos de backend y producto para garantizar la entrega de funcionalidades alineadas con los objetivos del negocio.",
     "experience.4.date": "Enero 2025 - Diciembre 2025",
@@ -48,7 +48,7 @@ export const ui = {
     "projects.4.description":
       "Sitio web agencia de marketing digital. Creado desde cero con Next.js, React y Tailwind CSS.",
     "projects.5.description":
-      "Sitio web agencia de consultoría y orientación laboral. Creado desde cero con Next.js, React y Tailwind CSS.",
+      "OmniArchive - Plataforma de análisis de datos multiversales desarrollada con Next.js 16, TypeScript, TanStack Query y Zustand. Features: dashboard interactivo, filtros en tiempo real, infinite scroll, componentes modulares y responsive design con glassmorphism UI.",
     "projects.6.description":
       "Una aplicación móvil desarrollada en React Native CLI que permite ver, buscar y explorar detalles de peliculas, asi como ver el trailer, elenco, generos y presupuesto utilizando la API de the movieDb.",
     "projects.7.description":
@@ -110,7 +110,7 @@ export const ui = {
     "projects.4.description":
       "Website for a digital marketing agency. Built from scratch with Next.js, React, and Tailwind CSS.",
     "projects.5.description":
-      "Website for a consulting and career guidance agency. Built from scratch with Next.js, React, and Tailwind CSS.",
+      "OmniArchive - A multi-dimensional data analytics platform built with Next.js 16, TypeScript, TanStack Query, and Zustand. Features: interactive dashboard, real-time filters, infinite scroll, modular components, and responsive design with Glassmorphism UI.",
     "projects.6.description":
       "A mobile app developed in React Native CLI that allows you to view, search and browse movie details, as well as view the trailer, cast, genres and budget using the movieDb API.",
     "projects.7.description":
