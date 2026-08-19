@@ -29,11 +29,27 @@ const TAGS = {
 }
 const PROJECTS = [
   {
-    title: "KIVA",
+    title: "KIVA Store",
     description: t("projects.7.description"),
     link: "https://www.kivactg.com/",
     github: "",
     image: "/images/kiva.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+  {
+    title: "Kiva Admin Panel",
+    description: t("projects.4.description"),
+    link: "",
+    github: "",
+    image: "/images/kiva-admin.webp", // Actualiza con la ruta de tu imagen
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+  {
+    title: "OmniArchive",
+    description: t("projects.5.description"),
+    link: "https://omni-archive-ruddy.vercel.app/characters",
+    github: "https://github.com/LeonardoGomezz/OmniArchive",
+    image: "/images/omniArchive.webp",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
   {
@@ -52,29 +68,7 @@ const PROJECTS = [
     image: "/images/moviesapp.jpeg",
     tags: [TAGS.REACT],
   },
-  // {
-  //   title: "Viviana Rodriguez - Wedding planner",
-  //   description: t("projects.3.description"),
-  //   link: "https://vivianarodriguez.co/",
-  //   image: "/images/vivianaRodriguez.png",
-  //   tags: [TAGS.NEXT, TAGS.TAILWIND],
-  // },
-  {
-    title: "C-Marketing",
-    description: t("projects.4.description"),
-    link: "https://somoscmarketing.com/",
-    image: "/images/c-marketing.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "Omni Archive",
-    description: t("projects.5.description"),
-    link: "https://omni-archive-ruddy.vercel.app/characters",
-    github: "https://github.com/LeonardoGomezz/OmniArchive",
-    image: "/images/omniArchive.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  }
-]
+];
 ---
 
 <div class="flex flex-col gap-y-16">
